@@ -8,10 +8,6 @@ A decentralized exchange aggregator for Polkadot AssetHub that compares prices a
 - Smart route optimization with split routing
 - Real-time quote comparison and refresh
 - Slippage protection and price impact analysis
-- Failed transaction retry mechanism
-- Limit order functionality
-- Web3 wallet integration via Web3Modal
-- Offline-capable quote caching
 
 ## Requirements
 
@@ -88,22 +84,6 @@ A decentralized exchange aggregator for Polkadot AssetHub that compares prices a
 - Uniswap V2/V3 compatible interfaces
 
 ## Build
-
-### Backend
-```bash
-cd backend
-yarn build          # Build TypeScript
-yarn dev            # Development mode
-yarn test           # Run tests (if available)
-```
-
-### Frontend
-```bash
-cd client
-yarn build          # Production build
-yarn start          # Start production server
-yarn lint           # Lint checks
-```
 
 ## Project Workflows
 
