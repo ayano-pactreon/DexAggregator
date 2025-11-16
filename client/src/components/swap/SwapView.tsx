@@ -349,7 +349,7 @@ export default function SwapView() {
                                         </p>
                                     </div>
                                     <a
-                                        href={`https://evm-sidechain.xrpl.org/tx/${approvalTxHash}`}
+                                        href={`https://paseo.subscan.io/tx/${approvalTxHash}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-xs text-blue-700 dark:text-blue-300 hover:underline block truncate"
@@ -369,7 +369,7 @@ export default function SwapView() {
                                         </p>
                                     </div>
                                     <a
-                                        href={`https://evm-sidechain.xrpl.org/tx/${txHash}`}
+                                        href={`https://paseo.subscan.io/tx/${txHash}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-xs text-green-700 dark:text-green-300 hover:underline block truncate"
@@ -591,11 +591,11 @@ export default function SwapView() {
                     className="mx-auto max-w-full text-2xl sm:text-3xl md:text-4xl font-black text-center leading-tight tracking-tight mb-0">
                     All{" "}
                     <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-teal-400 bg-clip-text text-transparent drop-shadow-lg">
-                        XRPL EVM DEXs.
+                        Paseo Testnet DEXs.
                     </span>{" "}
                     One{" "}
                     <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-teal-400 bg-clip-text text-transparent drop-shadow-lg">
-                        swap.show.
+                        DexAggregator.
                     </span>
                 </p>
             </div>

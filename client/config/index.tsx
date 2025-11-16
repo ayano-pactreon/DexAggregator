@@ -14,33 +14,33 @@ const metadata = {
   icons: ['https://avatars.githubusercontent.com/u/37784886']
 };
 
-// Define XRPL EVM Sidechain (Mainnet)
-export const xrplEvmSidechain = defineChain({
-  id: 1440000,
-  name: 'XRPL EVM Sidechain',
-  network: 'xrpl-evm-sidechain',
+// Define Paseo Testnet
+export const paseoTestnet = defineChain({
+  id: 420420422,
+  name: 'Paseo Testnet',
+  network: 'paseo-testnet',
   nativeCurrency: {
-    name: 'XRP',
-    symbol: 'XRP',
+    name: 'PAS',
+    symbol: 'PAS',
     decimals: 18,
   },
   rpcUrls: {
     default: {
-      http: [process.env.NEXT_PUBLIC_RPC_URL || 'https://rpc.xrplevm.org'],
+      http: [process.env.NEXT_PUBLIC_RPC_URL || 'https://testnet-passet-hub-eth-rpc.polkadot.io'],
     },
     public: {
-      http: [process.env.NEXT_PUBLIC_RPC_URL || 'https://rpc.xrplevm.org'],
+      http: [process.env.NEXT_PUBLIC_RPC_URL || 'https://testnet-passet-hub-eth-rpc.polkadot.io'],
     },
   },
   blockExplorers: {
     default: {
-      name: 'XRPL EVM Explorer',
-      url: 'https://explorer.xrplevm.org',
+      name: 'Paseo Explorer',
+      url: 'https://paseo.subscan.io',
     },
   },
 });
 
-const chains = [xrplEvmSidechain, mainnet, arbitrum, sepolia] as const;
+const chains = [paseoTestnet, mainnet, arbitrum, sepolia] as const;
 
 export const config = defaultWagmiConfig({
   chains,

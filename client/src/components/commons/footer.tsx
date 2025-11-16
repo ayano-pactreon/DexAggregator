@@ -10,7 +10,7 @@ export default function Footer() {
                       {/* Logo and Description */}
                       <div className="space-y-4">
                           <div className="flex items-center space-x-3">
-                              <h3 className="text-2xl brand-logo-header">swap.show</h3>
+                              <h3 className="text-2xl brand-logo-header">DexAggregator</h3>
                           </div>
                           <p className="text-muted-foreground">
                               Your Gateway to DeFi. Cross-chain aggregator for seamless trading across multiple
@@ -66,7 +66,7 @@ export default function Footer() {
                   <div
                     className="border-t border-[hsl(var(--card-border))] mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
                       <p className="text-muted-foreground text-sm">
-                          © 2025 swap.show. All rights reserved.
+                          © 2025 DexAggregator. All rights reserved.
                       </p>
                       <div className="flex space-x-6 mt-4 md:mt-0">
                           <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">

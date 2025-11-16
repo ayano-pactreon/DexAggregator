@@ -26,7 +26,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-    title: "swap.show - Cross-Chain Swap",
+    title: "DexAggregator - Cross-Chain Swap",
     description: "Trade across multiple blockchains with the best rates",
 };
 

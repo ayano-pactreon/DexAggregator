@@ -64,7 +64,7 @@ src/network/
 ### Environment Variables
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:3000
-NEXT_PUBLIC_RPC_URL=https://rpc.xrplevm.org
+NEXT_PUBLIC_RPC_URL=https://testnet-passet-hub-eth-rpc.polkadot.io
 NEXT_PUBLIC_PROJECT_ID=prj_20DS6Em5XOPwb7sJ0MRkjiuKDcil
 ```
 

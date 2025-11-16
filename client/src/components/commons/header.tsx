@@ -7,7 +7,7 @@ import {NavTab} from "@/lib/core/enums/NavTab";
 import {useWeb3Modal} from "@web3modal/wagmi/react";
 import { useWeb3ModalTheme } from "@web3modal/wagmi/react";
 import { useAccount, useChainId, useSwitchChain } from "wagmi";
-import { xrplEvmSidechain } from "@/../config";
+import { paseoTestnet } from "@/../config";
 
 import {useSwapViewModel} from "@/viewmodels/SwapViewModel";
 import {Socials} from "@/components/commons/Socials";
@@ -57,7 +57,7 @@ export default function Header() {
     const chainId = useChainId();
     const { switchChain } = useSwitchChain();
 
-    const isCorrectNetwork = chainId === xrplEvmSidechain.id;
+    const isCorrectNetwork = chainId === paseoTestnet.id;
 
     useEffect(() => {
         // Always use dark theme
@@ -72,7 +72,7 @@ export default function Header() {
 
     const handleNetworkSwitch = () => {
         if (switchChain) {
-            switchChain({ chainId: xrplEvmSidechain.id });
+            switchChain({ chainId: paseoTestnet.id });
         }
     };
 
@@ -85,7 +85,7 @@ export default function Header() {
                   <div className="flex items-center space-x-3">
 					  {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                       <a href="/" className="text-2xl brand-logo-header transition-all duration-300 hover:scale-105">
-                          swap.show
+                          DexAggregator
                       </a>
                   </div>
                   {/* Navigation (desktop only) */}
@@ -121,7 +121,7 @@ export default function Header() {
                               onClick={handleNetworkSwitch}
                               className="flex items-center gap-2 px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white font-medium rounded-full transition">
                               <AlertTriangle size={18} />
-                              Switch to XRPL EVM
+                              Switch to Paseo Testnet
                           </button>
                       )}
                       {isConnected && isCorrectNetwork && address && (

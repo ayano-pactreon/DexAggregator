@@ -63,7 +63,7 @@ function convertApiTokenToToken(apiToken: ApiToken): Token {
     symbol: apiToken.symbol,
     name: apiToken.name,
     decimals: apiToken.decimals,
-    network: 'XRPL EVM Sidechain',
+    network: 'Paseo Testnet',
     balance: '-',
     tokenPrice: '0.00',
     image: tokenImages[apiToken.symbol],

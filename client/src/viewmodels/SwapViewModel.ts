@@ -102,7 +102,7 @@ function convertApiTokenToToken(apiToken: ApiToken): Token {
         symbol: apiToken.symbol,
         name: apiToken.name,
         decimals: apiToken.decimals,
-        network: 'XRPL EVM',
+        network: 'Paseo Testnet',
         balance: '-',
         tokenPrice: '0.00', // Will be fetched from price API later
         image: tokenImages[apiToken.symbol] || undefined,
