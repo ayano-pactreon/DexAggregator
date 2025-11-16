@@ -29,4 +29,4 @@ export { V3_POOL_ABI } from './contracts/abis/v3Pool';
 export { V3_QUOTER_ABI } from './contracts/abis/v3Quoter';
 export { ERC20_ABI } from './contracts/abis/erc20';
 
-console.log('XRPL EVM DEX SDK (V2 & V3) loaded successfully!');
+console.log('Polkadot EVM DEX SDK (V2 & V3) loaded successfully!');

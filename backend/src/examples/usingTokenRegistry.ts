@@ -3,7 +3,7 @@ import { createProvider } from '../services/provider';
 import { V2Service } from '../services/v2Service';
 import { DEFAULT_CHAIN } from '../config/chains';
 import { UNISWAP_V2_FORK1 } from '../config/dexes';
-import { XRPL_MAINNET_TOKENS, MAINNET_TOKEN_REGISTRY } from '../config/tokens';
+import { MAINNET_TOKENS, MAINNET_TOKEN_REGISTRY } from '../config/tokens';
 import { parseUnits } from 'viem';
 import { formatTokenAmount } from '../utils/formatting';
 
@@ -20,8 +20,8 @@ async function main() {
   console.log('--- Method 1: Direct Token Access ---\n');
 
   // Direct access to token objects
-  const weth = XRPL_MAINNET_TOKENS.WETH;
-  const usdc = XRPL_MAINNET_TOKENS.USDC;
+  const weth = MAINNET_TOKENS.WETH;
+  const usdc = MAINNET_TOKENS.USDC;
 
   console.log(`Token In: ${weth.symbol}`);
   console.log(`Address: ${weth.address}`);
@@ -30,10 +30,10 @@ async function main() {
   console.log('--- Method 2: Registry Lookup by Symbol ---\n');
 
   // Get token by symbol (case-insensitive)
-  const xrp = MAINNET_TOKEN_REGISTRY.getBySymbol('xrp'); // lowercase works too!
-  if (xrp) {
-    console.log(`Found: ${xrp.symbol} (${xrp.name})`);
-    console.log(`Address: ${xrp.address}\n`);
+  const dot = MAINNET_TOKEN_REGISTRY.getBySymbol('dot'); // lowercase works too!
+  if (dot) {
+    console.log(`Found: ${dot.symbol} (${dot.name})`);
+    console.log(`Address: ${dot.address}\n`);
   }
 
   console.log('--- Method 3: Registry Lookup by Address ---\n');
@@ -48,8 +48,8 @@ async function main() {
 
   // Get quotes for multiple token pairs
   const pairs = [
-    { from: XRPL_MAINNET_TOKENS.WETH, to: XRPL_MAINNET_TOKENS.XRP },
-    { from: XRPL_MAINNET_TOKENS.WETH, to: XRPL_MAINNET_TOKENS.USDC },
+    { from: MAINNET_TOKENS.WETH, to: MAINNET_TOKENS.DOT },
+    { from: MAINNET_TOKENS.WETH, to: MAINNET_TOKENS.USDC },
   ];
 
   for (const { from, to } of pairs) {
@@ -97,7 +97,7 @@ async function main() {
   // Check if tokens exist
   console.log(`Has WETH: ${MAINNET_TOKEN_REGISTRY.hasSymbol('WETH')}`);
   console.log(`Has MATIC: ${MAINNET_TOKEN_REGISTRY.hasSymbol('MATIC')}`);
-  console.log(`Has USDC address: ${MAINNET_TOKEN_REGISTRY.hasAddress(XRPL_MAINNET_TOKENS.USDC.address)}`);
+  console.log(`Has USDC address: ${MAINNET_TOKEN_REGISTRY.hasAddress(MAINNET_TOKENS.USDC.address)}`);
   console.log();
 
   console.log('=== Example Complete ✓ ===');

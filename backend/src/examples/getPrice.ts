@@ -3,7 +3,7 @@ import { createProvider } from '../services/provider';
 import { V2Service } from '../services/v2Service';
 import { DEFAULT_CHAIN } from '../config/chains';
 import { UNISWAP_V2_FORK1 } from '../config/dexes';
-import { XRPL_MAINNET_TOKENS } from '../config/tokens';
+import { MAINNET_TOKENS } from '../config/tokens';
 import { parseUnits } from 'viem';
 import { formatTokenAmount } from '../utils/formatting';
 import { calculatePriceImpact } from '../utils/calculations';
@@ -17,8 +17,8 @@ async function main() {
   console.log('=== Get Token Price Quote ===\n');
 
   // Use token registry for type-safe token access
-  const TOKEN_IN = XRPL_MAINNET_TOKENS.WETH.address;
-  const TOKEN_OUT = XRPL_MAINNET_TOKENS.XRP.address;
+  const TOKEN_IN = MAINNET_TOKENS.WETH.address;
+  const TOKEN_OUT = MAINNET_TOKENS.DOT.address;
   const AMOUNT_IN = '0.001'; // Amount to swap (in human-readable format)
 
   // Create provider

@@ -5,7 +5,7 @@ export interface Token {
   symbol: string;
   name: string;
   decimals: number;
-  isNative?: boolean; // True for native gas tokens like XRP/ETH
+  isNative?: boolean; // True for native gas tokens like DOT/ETH
 }
 
 export interface ChainConfig {

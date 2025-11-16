@@ -8,12 +8,12 @@ import { formatTokenAmount } from '../utils/formatting';
 /**
  * Example: Query liquidity for a specific pair
  *
- * Update PAIR_ADDRESS with an actual pair address on XRPL EVM Sidechain
+ * Update PAIR_ADDRESS with an actual pair address on Polkadot EVM Sidechain
  */
 async function main() {
   console.log('=== Query Pair Liquidity ===\n');
 
-  // Real pair address from XRPL EVM Sidechain (WETH/XRP pair)
+  // Real pair address from Polkadot EVM Sidechain (WETH/DOT pair)
   const PAIR_ADDRESS = '0xdC1c3636cBC24Ca479dD0178e814D0b173750517';
 
   // Create provider
